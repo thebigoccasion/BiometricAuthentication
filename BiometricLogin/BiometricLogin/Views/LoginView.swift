@@ -10,7 +10,7 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var authenticationManager: AuthenticationManager
     var body: some View {
-        VStack(spacing: 40) {
+        VStack(spacing: 50) {
             Title()
                 .padding(.bottom)
                 .padding(.bottom)
@@ -21,10 +21,26 @@ struct LoginView: View {
             switch authenticationManager.biometryType {
             case .faceID:
                 PrimaryButton(image: "faceid", text: "Login with FaceID")
+                    .onTapGesture {
+                        Task.init {
+                            await authenticationManager.authenticateWithBioMetrics()
+                        }
+                    }
             case .touchID:
                 PrimaryButton(image: "touchid", text: "Login with TouchID")
+                    .onTapGesture {
+                        Task.init {
+                            await authenticationManager.authenticateWithBioMetrics()
+                        }
+                    }
             default:
+                NavigationLink {
+                    CredentialsLoginView()
+                        .environmentObject(authenticationManager)
+                } label: {
                 PrimaryButton(image: "person.fill", text: "Login with Credentials")
+                }
+                
                 
             }
             

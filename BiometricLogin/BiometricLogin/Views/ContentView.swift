@@ -12,7 +12,19 @@ struct ContentView: View {
     
     
     var body: some View {
-        VStack {
+        NavigationView {
+            if authenticationManger.isAuthenticated {
+                VStack {
+                    Text("You have been authenticated!")
+                    .foregroundColor(.white)
+                
+                PrimaryButton(showImage: false, text: "Logout")
+                    .onTapGesture {
+                        authenticationManger.logOut()
+                    }}
+                .background(.black)
+            } else {
+                VStack {
             LoginView()
                 .environmentObject(authenticationManger)
         }
@@ -21,7 +33,8 @@ struct ContentView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .edgesIgnoringSafeArea(.all)
-        .background(LinearGradient(colors: [Color("LightBlue"), Color("LightGreen")], startPoint: .topLeading, endPoint: .bottomTrailing))
+        .background(LinearGradient(colors: [Color("LightBlue"), Color("LightGreen")], startPoint: .topLeading, endPoint: .bottomTrailing))}
+        }
     }
 }
 

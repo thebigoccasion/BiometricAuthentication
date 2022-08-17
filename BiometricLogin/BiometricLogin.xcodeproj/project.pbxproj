@@ -15,6 +15,7 @@
 		234F815C28A5BDAF0066448D /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F815B28A5BDAF0066448D /* PrimaryButton.swift */; };
 		234F815F28A5BF810066448D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F815E28A5BF810066448D /* LoginView.swift */; };
 		234F816128A5C4C50066448D /* AuthenticationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F816028A5C4C50066448D /* AuthenticationManager.swift */; };
+		234F818328ABFAE60066448D /* CredentialsLoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234F818228ABFAE60066448D /* CredentialsLoginView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		234F815B28A5BDAF0066448D /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		234F815E28A5BF810066448D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		234F816028A5C4C50066448D /* AuthenticationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationManager.swift; sourceTree = "<group>"; };
+		234F818228ABFAE60066448D /* CredentialsLoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsLoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +93,7 @@
 			children = (
 				234F814C28A5BA940066448D /* ContentView.swift */,
 				234F815E28A5BF810066448D /* LoginView.swift */,
+				234F818228ABFAE60066448D /* CredentialsLoginView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -167,6 +170,7 @@
 			files = (
 				234F814D28A5BA940066448D /* ContentView.swift in Sources */,
 				234F815A28A5BB080066448D /* Title.swift in Sources */,
+				234F818328ABFAE60066448D /* CredentialsLoginView.swift in Sources */,
 				234F815C28A5BDAF0066448D /* PrimaryButton.swift in Sources */,
 				234F816128A5C4C50066448D /* AuthenticationManager.swift in Sources */,
 				234F815F28A5BF810066448D /* LoginView.swift in Sources */,

@@ -28,6 +28,7 @@ class AuthenticationManager: ObservableObject {
                 if success {
                     DispatchQueue.main.async {
                         self.isAuthenticated = true
+                        print("isAuthenticated", self.isAuthenticated)
                     }
                 }
             } catch {
@@ -44,6 +45,19 @@ class AuthenticationManager: ObservableObject {
     func getBiometryType() {
         canEvaluatePolicy = context.canEvaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, error: nil)
         biometryType = context.biometryType
+    }
+    
+    func authenticateWithCredentials(username: String, password: String) {
+        if username.lowercased() == "aj" && password == "legendary" {
+            self.isAuthenticated = true
+        } else {
+            errorDescription = "Wrong credentials"
+            showAlert = true
+        }
+    }
+    
+    func logOut() {
+        isAuthenticated = false
     }
     
     init() {
